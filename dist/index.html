@@ -8,28 +8,15 @@
   <style>
   .normal{
     box-sizing: border-box;
-    /* BFC */
-    overflow: hidden;
-    height: 25px;
-    text-align: center;
+    height: 20px;
+    line-height: 20px;
     display: inline-block;
     padding: 0px 7px;
-    position: relative;
-  }
-  .normal:after{
-    content:'';
-    position: relative;
-    display: inline-block;
-    width: 0;
-    top: -13px;
-    border-bottom: 3px solid blue;
-    transition: width .5s ease-in-out;
   }
   .translate{
+    border-bottom: 3px solid blue;
     color: blue;
-  }
-  .translate:after{
-    width: 100% !important;
+    translate: all .7s ease-in-out;
   }
   .btn{
     border-radius: 4px;
@@ -38,9 +25,7 @@
 </head>
 <body>
   <div class="normal" id="target">我是一只小码农</div>
-  <div>
-    <button class="btn" onclick="toggleClass()">切换样式</button>
-  </div>
+  <button class="btn" onclick="toggleClass">切换样式</button>
   <!-- <script src="./dist/bundle.js"></script> -->
-</body>
+<script type="text/javascript" src="/bundle.js"></script></body>
 </html>
