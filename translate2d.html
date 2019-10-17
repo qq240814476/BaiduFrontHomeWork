@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style lang="less">
+    div{
+      box-size: border-box;
+    }
+    .parent{
+      width: 700px;
+      height: 250px;
+      display: flex;
+      border: 1px dashed green;
+      & .translate{
+        text-align: center;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border: 2px solid #ddd;
+        background: #eee;
+        margin: auto;
+        display: inline-block;
+      }
+    }
+    // 倾斜30°
+    .box1{
+      transform: skewX(30deg);
+    }
+    // 沿X轴缩放50%
+    .box2{
+      transform: scaleX(0.5);
+    }
+    // 以中心为原点 旋转45度
+    .box3{
+      transform: rotate(45deg);
+    }
+    // 偏移 x 10px y 20px
+    .box4{
+      transform: translate(10px, 20px);
+    }
+    // 以中心为原点 旋转45度
+    .box5{
+      // 肯定是以左下角为原点，但是无论如何都不能和设计稿一样啊
+      transform-origin: bottom left;
+      transform: scaleX(0.5) skewX(30deg)  rotate(45deg)   translate(10px, 20px);
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="translate box0">box0</div>
+    <div class="translate box1">box1</div>
+    <div class="translate box2">box2</div>
+    <div class="translate box3">box3</div>
+    <div class="translate box4">box4</div>
+    <div class="translate box5">box5</div>
+  </div>
+</body>
+</html>

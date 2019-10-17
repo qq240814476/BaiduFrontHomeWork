@@ -41,6 +41,18 @@
   <div>
     <button class="btn" onclick="toggleClass()">切换样式</button>
   </div>
-  <!-- <script src="./dist/bundle.js"></script> -->
+  <script type="text/javascript">
+    target = document.getElementById('target')
+    flag = false
+
+    toggleClass = function(){
+      if (flag) {
+        target.className = "normal"
+      } else {
+        target.className = "normal translate"
+      }
+      flag = !flag
+    }
+  </script>
 </body>
 </html>

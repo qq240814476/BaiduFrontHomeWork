@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
   entry: {
-    app: './index.js'
+    menu: './transition-menu.js'
   },
   devtool: 'source-map',
   output: {
@@ -22,11 +22,11 @@ module.exports = {
   },
   plugins:[
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: './transition-menu.html'
     })
   ],
   devServer: {
     port: 9000,
-    index: 'index.html'
+    index: 'transition-menu.html'
   }
 }
